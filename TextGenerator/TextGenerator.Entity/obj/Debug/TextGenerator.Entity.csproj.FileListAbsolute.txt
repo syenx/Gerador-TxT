@@ -1,0 +1,12 @@
+C:\Users\marcelofranco\source\repos\TextGenerator\TextGenerator.Entity\bin\Debug\TextGenerator.Entity.dll
+C:\Users\marcelofranco\source\repos\TextGenerator\TextGenerator.Entity\bin\Debug\TextGenerator.Entity.pdb
+C:\Users\marcelofranco\source\repos\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.csprojAssemblyReference.cache
+C:\Users\marcelofranco\source\repos\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.csproj.CoreCompileInputs.cache
+C:\Users\marcelofranco\source\repos\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.dll
+C:\Users\marcelofranco\source\repos\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.pdb
+C:\Users\marcelofranco\Desktop\desafio\TextGenerator\TextGenerator.Entity\bin\Debug\TextGenerator.Entity.dll
+C:\Users\marcelofranco\Desktop\desafio\TextGenerator\TextGenerator.Entity\bin\Debug\TextGenerator.Entity.pdb
+C:\Users\marcelofranco\Desktop\desafio\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.csprojAssemblyReference.cache
+C:\Users\marcelofranco\Desktop\desafio\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.csproj.CoreCompileInputs.cache
+C:\Users\marcelofranco\Desktop\desafio\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.dll
+C:\Users\marcelofranco\Desktop\desafio\TextGenerator\TextGenerator.Entity\obj\Debug\TextGenerator.Entity.pdb

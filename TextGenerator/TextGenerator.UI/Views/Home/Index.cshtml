@@ -1,0 +1,189 @@
+﻿@model IEnumerable<TextGeneratePersistence.TransacaoEntity>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<div id="popUp">
+    <div id="popUpBody">
+
+        Cadastros
+        <br />
+
+        <p>
+            Cartao:
+            @Html.TextBox("Cartao", null, new { @class = "form-control" })<br />
+        </p>
+
+        <p>
+            Valor:
+            @Html.TextBox("Valor", null, new { @class = "form-control" })<br />
+        </p>
+
+        <p>
+            Data:
+            
+            @Html.TextBox("Data", null, string.Format("00/00/0000"), new { @class = "form-control", Value = String.Format("{0:C}", "") } )<br />
+        </p>
+        <div><input type="button" id="GerarTxt" onclick="salvarNovo();" value="SALVAR"> </div>
+    </div>
+</div>
+<h2>Index</h2>
+
+<p>
+    <div><input type="button" id="GerarTxt" onclick="AbrirPopUp();" value="Criar Novo"> </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdTransacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cartao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTransacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cartao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+
+                <div><input type="button" id="GerarTxt" onclick="gerartxt(@item.IdTransacao);" value="Gerar Arquivo texto"> </div>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            </td>
+        </tr>
+    }
+
+    <div><input type="button" id="GerarTxt" onclick="gerartxtTodos();" value="Gerar a lista"> </div>
+
+    <script type="text/javascript">
+
+
+
+        function gerartxt(id) {
+            var url = "/Home/Index";
+
+            $.ajax({
+                url: url
+                , datatype: "html"
+                , type: 'POST'
+                , data: { id: id }
+                , success: function (data) { }
+            });
+
+        }
+
+        function gerartxtTodos(id) {
+            var url = "/Home/IndexAll";
+
+            $.ajax({
+                url: url
+                , datatype: "html"
+                , type: 'POST'
+                , data: { id: id }
+                , success: function (data) { }
+            });
+        }
+
+        function AbrirPopUp() {
+            $("#popUp").css("display", "block")
+            $("#DataInput").mask("99-99-9999");
+            $("#Valor").mask('999.999,99', { reverse: false })
+            $("#Cartao").mask("99999999999");
+
+        }
+
+        function fecharPopUp() {
+            var url = "/Home/IndexAll";
+
+            data = new {
+
+            }
+
+            $.ajax({
+                url: url
+                , datatype: "html"
+                , type: 'POST'
+                , data: { id: id }
+                , success: function (data) { }
+            });
+        }
+
+
+        function salvarNovo() {
+
+
+
+            var url = "/Home/Create";
+
+            var data = {
+                Cartao : $("#Cartao").val(),
+                Valor: $("#Valor").val(),
+                Data: $("#Data").val()
+            }
+
+
+
+            $.ajax({
+                url: url
+                , datatype: "html"
+                , type: 'POST'
+                , data: { data : data}
+                , success: function (data) {
+                   
+                }
+            });
+            $("#popUp").css("display", "none")
+
+        }
+
+    </script>
+
+</table>
+
+<style>
+    #popUp {
+        overflow: auto;
+        border-radius: 10px;
+        background-color: blue;
+        width: 278px;
+        height: 220px;
+        display: none;
+        margin: 10% 0 0 30%;
+        z-index: 1;
+        position: fixed;
+    }
+
+    #popUpBody {
+        background-color: #c6c6e0;
+        width: 250px;
+        height: 170px;
+        margin: 0 0 0 0;
+        border-radius: 10px;
+        padding: 25px 9px 0px 14px;
+    }
+</style>

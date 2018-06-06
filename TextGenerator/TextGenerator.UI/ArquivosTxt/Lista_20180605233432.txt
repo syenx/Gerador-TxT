@@ -1,0 +1,24 @@
+Cartao: 11111111
+Valor: 12
+Data: 05/05/2018 00:00:00
+Cartao: 11111111
+Valor: 12
+Data: 05/05/2018 00:00:00
+Cartao: 111
+Valor: 222
+Data: 02/02/2015 00:00:00
+Cartao: 55
+Valor: 10
+Data: 10/10/2018 00:00:00
+Cartao: 0
+Valor: 0
+Data: 06/09/1988 00:00:00
+Cartao: 0
+Valor: 0
+Data: 02/02/2015 00:00:00
+Cartao: 0
+Valor: 0
+Data: 01/01/2018 00:00:00
+Cartao: 0
+Valor: 0
+Data: 01/01/2018 00:00:00
